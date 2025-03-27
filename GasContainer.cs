@@ -14,4 +14,18 @@ public class GasContainer : Container, IHazardNotifier
     {
         Console.WriteLine($"HAZARD! Serial Number  {message} ");
     }
+
+	public override void Load(double weight) 
+	{
+		if(LoadWeight + weight > MaxLoad)
+		{
+			NotifyHazard("Attempt to overload gas container");
+            throw new OverfillException("Load exceeds gas container capacity.");
+        }
+		LoadWeight += weight;
+	}
+	public void Unload()
+	{
+		LoadWeight *= 0.05; // leave 5%
+	}
 }

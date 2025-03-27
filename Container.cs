@@ -20,4 +20,13 @@ public string SerialNum { get; private set; } // ustawimy później w generowani
 
     // TODO: Serial number generation
     }
+
+    public virtual void Load(double weight) 
+    {
+        if (this.LoadWeight + weight > this.MaxLoad) 
+        {
+            throw new OverfillException("Load exceeds container capacity.");
+        }
+        this.LoadWeight += weight;
+    }
 }

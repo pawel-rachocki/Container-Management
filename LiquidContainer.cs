@@ -14,4 +14,15 @@ public class LiquidContainer : Container, IHazardNotifier
 	{
 		Console.WriteLine($"HAZARD! Serial Number  {message} ");
 	}
+
+	public override void Load(double weight)
+	{
+		double capacityLimit = IsHazardous ? 0.5 * MaxLoad : 0.9 * MaxLoad;
+
+		if(LoadWeight + weight > capacityLimit) 
+		{
+			NotifyHazard("Attempt to overload liquid container");
+			throw new OverfillException("Load exceeds safe capacity for liquid container.");
+		}
+		LoadWeight += weight;
 }
