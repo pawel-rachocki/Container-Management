@@ -4,16 +4,16 @@ public class RefrigeratedContainer : Container
 {
     private static readonly Dictionary<string, double> RequiredTemperatures = new()
 {
-    { "Banany", 13.3 },
-    { "Czekolada", 18 },
-    { "Ryby", 2 },
-    { "Mięso", -15 },
-    { "Lody", -18 },
-    { "Mrożona pizza", -30 },
-    { "Ser", 7.2 },
-    { "Kiełbasa", 5 },
-    { "Masło", 20.5 },
-    { "Jajka", 19 }
+    { "Bananas", 13.3 },
+    { "Chocolate", 18 },
+    { "Fish", 2 },
+    { "Meat", -15 },
+    { "Ice Cream", -18 },
+    { "Frozen Pizza", -30 },
+    { "Cheese", 7.2 },
+    { "Sausage", 5 },
+    { "Butter", 20.5 },
+    { "Eggs", 19 }
 };
 
     private string ProductType { get; set; }
