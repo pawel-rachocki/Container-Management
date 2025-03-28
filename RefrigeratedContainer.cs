@@ -46,6 +46,11 @@ public class RefrigeratedContainer : Container
         base.Load(weight);
         ProductType = productType;
     }
-
+    public override void PrintInfo()
+    {
+        base.PrintInfo();
+        Console.WriteLine($"ProductType: {ProductType}");
+        Console.WriteLine($"Temperature: {Temperature}");
+    }
 
 }
