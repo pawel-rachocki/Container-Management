@@ -24,7 +24,7 @@ public class GasContainer : Container, IHazardNotifier
         }
 		LoadWeight += weight;
 	}
-	public void Unload()
+	public override void Unload()
 	{
 		LoadWeight *= 0.05; // leave 5%
 	}

@@ -29,4 +29,8 @@ public string SerialNum { get; private set; } // ustawimy później w generowani
         }
         this.LoadWeight += weight;
     }
+    public virtual void Unload()
+    {
+        LoadWeight = 0;
+    }
 }
