@@ -28,4 +28,10 @@ public class GasContainer : Container, IHazardNotifier
 	{
 		LoadWeight *= 0.05; // leave 5%
 	}
+    public override void PrintInfo()
+    {
+        base.PrintInfo();
+        Console.WriteLine($"Pressure: {Pressure}");
+    }
+
 }

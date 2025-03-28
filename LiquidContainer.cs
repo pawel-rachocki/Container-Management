@@ -26,5 +26,11 @@ public class LiquidContainer : Container, IHazardNotifier
 		}
 		LoadWeight += weight;
 	}
+    public override void PrintInfo()
+    {
+        base.PrintInfo();
+        Console.WriteLine($"Hazardous: {(IsHazardous ? "YES" : "NO")}");
+    }
+
 
 }
